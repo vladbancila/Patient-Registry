@@ -1,0 +1,11 @@
+
+Pacient nume = Vlad, prenume = Octavian, telefon = 0751251120, email = vlad@yahoo.co, cnp = 1111111111111
+Pacient nume = Florin, prenume = Balasa, telefon = 0755555555, email = radu@yahoo.com, cnp = 2222222222222
+Pacient nume = Gigi, prenume = Balasa, telefon = 0755555555, email = radu@yahoo.com, cnp = 3333333333333
+Pacient nume = Cico, prenume = Balasa, telefon = 0755555555, email = radu@yahoo.com, cnp = 4444444444444
+Pacient nume = Vasile, prenume = Florica, telefon = 0755555555, email = radu@yahoo.com, cnp = 5555555555555
+Pacient nume = Vasile, prenume = Gica, telefon = 0755555555, email = radu@yahoo.com, cnp = 6565656565656
+Pacient nume = Maria, prenume = Mica, telefon = 0755555555, email = radu@yahoo.com, cnp = 8989897562317
+Pacient nume = Ulica, prenume = Olas, telefon = 0755555555, email = radu@yahoo.com, cnp = 8888888888888
+Pacient nume = Braco, prenume = Silviu, telefon = 0755555555, email = radu@yahoo.com, cnp = 9999999999999
+Pacient nume = Alin, prenume = Vizitiu, telefon = 0796325584, email = radu@yahoo.com, cnp = 4545454545454
