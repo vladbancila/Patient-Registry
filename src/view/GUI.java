@@ -74,26 +74,32 @@ public class GUI extends JFrame {
 		panel = new JPanel();
 
 		nume = new JLabel("Nume : ");
+		nume.setForeground(Color.CYAN);
 		camp1 = new JTextField(25);
 		camp1.setText("Introduceti numele");
 
 		telefon = new JLabel(" Telefon mobil: ");
+		telefon.setForeground(Color.CYAN);
 		camp3 = new JTextField(25);
 		camp3.setText("Introduceti numar telefon mobil");
 
 		prenume = new JLabel("Prenume : ");
+		prenume.setForeground(Color.CYAN);
 		camp2 = new JTextField(25);
 		camp2.setText("Introduceti prenumele");
 
 		email = new JLabel("Email :");
+		email.setForeground(Color.CYAN);
 		camp4 = new JTextField(25);
 		camp4.setText("Introduceti email persoana");
 
 		adeverinta = new JLabel("CNP :");
+		adeverinta.setForeground(Color.CYAN);
 		camp5 = new JTextField(25);
 		camp5.setText("Adauga seria  CNP ");
 
 		cautare = new JLabel("Cautare pacient dupa CNP :");
+		cautare.setForeground(Color.CYAN);
 		camp6 = new JTextField(25);
 		camp6.setText("Adauga serie CNP ");
 
@@ -184,6 +190,7 @@ public class GUI extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				//Se salveaza in fisierul text 
 				File file = new File("ListaPacienti.txt");
 				String textIntrodus = "";
 				for (Pacient pacient : grup.pacienti) {
@@ -193,7 +200,7 @@ public class GUI extends JFrame {
 				try (BufferedWriter br = new BufferedWriter(new FileWriter(file))) {
 					br.write(textIntrodus + "\n");
 				} catch (IOException exceptie) {
-					System.out.println("Unable to write file " + file.toString());
+					System.out.println("Nu s-a putut scrie fisierul..." + file.toString());
 				}
 				// SCRIEREA OBIECTELOR IN FISIER
 
@@ -203,7 +210,7 @@ public class GUI extends JFrame {
 				try {
 					fos = new FileOutputStream(new File("obiect"));// Creaza si
 																	// scrie
-																	// fisierul
+																	// fisierul nou
 					oos = new ObjectOutputStream(fos);
 
 					for (Pacient pacient : grup.pacienti) {
@@ -251,7 +258,7 @@ public class GUI extends JFrame {
 		scroll.setViewportView(list);
 		scroll.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 
-		this.add(panel, BorderLayout.WEST);
+		getContentPane().add(panel, BorderLayout.WEST);
 		panel.setBackground(Color.blue);
 
 		panel.add(nume);
@@ -275,7 +282,7 @@ public class GUI extends JFrame {
 		panel.add(buton5);
 
 		panel.setLayout(new GridLayout(0, 1, 0, 0));
-		this.add(scroll, BorderLayout.CENTER);
+		getContentPane().add(scroll, BorderLayout.CENTER);
 
 		grup.importaDatePacienti();// Se realizeaza importul pacientilor salvati
 
