@@ -50,15 +50,13 @@ public class Pacient implements Serializable {
 
 	@Override
 	public String toString() {
-		return "\n" + "Pacient nume = " + nume + ", prenume = " + prenume + ", telefon = " + telefon + ", email = "
-				+ email + ", cnp = " + cnp;
+		return "\n" + "Pacient nume = " + nume + ", prenume = " + prenume + ", telefon = " + telefon + ", email = " + email + ", cnp = " + cnp;
 	}
 
 	public Pacient(String nume, String prenume, String telefon, String email, String adeverinta) throws Exception {
 		super();
 		// (negatia conjunctiei === disjunctia negatiilor)
-		if (!setNume(nume) || !setPrenume(prenume) || !setTelefon(telefon) || !setEmail(email)
-				|| !setAdeverinta(adeverinta)) {
+		if (!setNume(nume) || !setPrenume(prenume) || !setTelefon(telefon) || !setEmail(email) || !setAdeverinta(adeverinta)) {
 			throw new Exception();
 		}
 
@@ -75,7 +73,7 @@ public class Pacient implements Serializable {
 			this.nume = nume;
 			return true;
 		}
-		System.out.println("Va rugam repetati procedura.");		
+		System.out.println("Va rugam repetati procedura.");
 		return false;
 	}
 
@@ -120,7 +118,7 @@ public class Pacient implements Serializable {
 			return true;
 		}
 		System.out.println("Va rugam repetati procedura ati introdus un email gresit");
-		
+
 		return false;
 	}
 
